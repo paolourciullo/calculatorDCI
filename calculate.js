@@ -6,6 +6,7 @@ $(document).ready(function () {
     $('#calculatorInput').empty();
   });
   $('.evaluate').on('click', function () {
-    eval($('#calculatorInput').val());
+    // eval($('#calculatorInput').text());
+    console.log($('#calculatorInput').text());
   });
 });

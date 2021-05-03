@@ -6,7 +6,11 @@ $(document).ready(function () {
     $('#calculatorInput').empty();
   });
   $('.evaluate').on('click', function () {
-    // eval($('#calculatorInput').text());
-    console.log($('#calculatorInput').text());
+    calcIn = $('#calculatorInput').text();
+    // console.log(calcIn);
+    // console.log(typeof calcIn);
+
+    calcOut = eval($('#calculatorInput').text());
+    $('#calculatorInput').text(calcOut);
   });
 });

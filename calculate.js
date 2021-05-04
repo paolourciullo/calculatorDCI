@@ -5,12 +5,22 @@ $(document).ready(function () {
   $('.clear').on('click', function () {
     $('#calculatorInput').empty();
   });
-  $('.evaluate').on('click', function () {
-    // calcIn = $('#calculatorInput').text();
-    // console.log(calcIn);
-    // console.log(typeof calcIn);
 
+  $('.evaluate').on('click', function () {
     calcOut = eval($('#calculatorInput').text());
+    try{
+      if(calcOut == '' ) throw 'empty';
+      
+      
     $('#calculatorInput').text(calcOut);
-  });
+
+  }
+  catch(err) {
+    $('#calculatorInput').text('Input is ' + err)
+  }
+  );
+  // try {
+  // } catch (err) {
+  //   $('#calculatorInput').text(err.message);
+  // }
 });

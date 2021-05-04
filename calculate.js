@@ -6,7 +6,7 @@ $(document).ready(function () {
     $('#calculatorInput').empty();
   });
   $('.evaluate').on('click', function () {
-    calcIn = $('#calculatorInput').text();
+    // calcIn = $('#calculatorInput').text();
     // console.log(calcIn);
     // console.log(typeof calcIn);
 
